@@ -122,6 +122,158 @@ a {
     color: #4a557f;
 }
 
+/* ---------- Talón de una oportunidad ---------- */
+.talones {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid #1b2a6b;
+}
+
+.talon {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr auto;
+    align-items: stretch;
+    border-bottom: 2px solid #1b2a6b;
+}
+
+.talon__fecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9rem 0.5rem;
+    background-color: var(--c, #1b2a6b);
+    color: #ffffff;
+    text-align: center;
+    line-height: 1;
+}
+
+.talon__dia {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.talon__mes {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* La línea discontinua imita el troquel por donde se corta el talón */
+.talon__cuerpo {
+    padding: 1rem 1.25rem;
+    border-left: 3px dashed #ffffff;
+    margin-left: -3px;
+}
+
+.talon__titulo {
+    font-size: 1.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.talon__titulo a {
+    text-decoration: none;
+}
+
+.talon__titulo a:hover {
+    text-decoration: underline;
+}
+
+.talon__dato {
+    margin: 0;
+    color: #4a557f;
+}
+
+.talon__causa {
+    align-self: center;
+    margin-right: 1.25rem;
+    padding: 0.25rem 0.75rem;
+    border: 2px solid var(--c, #1b2a6b);
+    border-radius: 2rem;
+    color: var(--c, #1b2a6b);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.talon__causa:hover {
+    background-color: var(--c, #1b2a6b);
+    color: #ffffff;
+}
+
+/* ---------- Páginas de detalle ---------- */
+.migas {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #4a557f;
+}
+
+.ficha-cabecera {
+    margin-bottom: 2rem;
+    max-width: 50rem;
+}
+
+.ficha-cabecera h1 {
+    font-size: 3.5rem;
+    color: var(--c, #1b2a6b);
+}
+
+.ficha-cabecera .entradilla {
+    margin-top: 1rem;
+}
+
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 0 2.5rem;
+    border: 2px solid #1b2a6b;
+}
+
+.datos div {
+    flex: 1 1 10rem;
+    padding: 0.9rem 1.1rem;
+    border-right: 2px dashed #1b2a6b;
+}
+
+.datos div:last-child {
+    border-right: 0;
+}
+
+.datos dt {
+    font-size: 0.9rem;
+    color: #4a557f;
+}
+
+.datos dd {
+    margin: 0.15rem 0 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.lista-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-enlaces a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #1b2a6b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.lista-enlaces a:hover {
+    background-color: #ffd43b;
+}
+
 /* ---------- Pie ---------- */
 .pie {
     background-color: #1b2a6b;

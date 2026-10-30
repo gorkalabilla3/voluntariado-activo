@@ -1,0 +1,48 @@
+{% extends "voluntariado/base_detalle.html" %}
+
+{% block titulo %}{{ oportunidad.titulo }}{% endblock %}
+{% block miga_seccion %}<a href="{% url 'lista_oportunidades' %}">Oportunidades</a>{% endblock %}
+{% block titulo_pagina %}{{ oportunidad.titulo }}{% endblock %}
+{% block clase_color %}c-{{ oportunidad.causa.nombre|slugify }}{% endblock %}
+{% block titulo_h1 %}{{ oportunidad.titulo }}{% endblock %}
+{% block subtitulo %}<p class="entradilla">{{ oportunidad.descripcion }}</p>{% endblock %}
+
+{% block ficha %}
+<dl class="datos">
+    <div>
+        <dt>Causa</dt>
+        <dd><a href="{{ oportunidad.causa.get_absolute_url }}">{{ oportunidad.causa.nombre }}</a></dd>
+    </div>
+    <div>
+        <dt>Empieza</dt>
+        <dd><time datetime="{{ oportunidad.fecha_inicio|date:'Y-m-d' }}">{{ oportunidad.fecha_inicio|date:"j \d\e F \d\e Y" }}</time></dd>
+    </div>
+    {% if oportunidad.fecha_fin %}
+    <div>
+        <dt>Termina</dt>
+        <dd><time datetime="{{ oportunidad.fecha_fin|date:'Y-m-d' }}">{{ oportunidad.fecha_fin|date:"j \d\e F \d\e Y" }}</time></dd>
+    </div>
+    {% endif %}
+    <div>
+        <dt>Lugar</dt>
+        <dd>{{ oportunidad.lugar }}</dd>
+    </div>
+    <div>
+        <dt>Dedicación</dt>
+        <dd>{{ oportunidad.horas_semana }} h a la semana</dd>
+    </div>
+    <div>
+        <dt>Plazas</dt>
+        <dd>{{ oportunidad.plazas }}</dd>
+    </div>
+</dl>
+
+<section>
+    <h2>Quién la organiza</h2>
+    <ul class="lista-enlaces">
+        {% for entidad in oportunidad.entidades.all %}
+            <li><a href="{{ entidad.get_absolute_url }}">{{ entidad.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

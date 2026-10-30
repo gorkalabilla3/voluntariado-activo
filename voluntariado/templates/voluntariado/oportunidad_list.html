@@ -1,0 +1,15 @@
+{% extends "voluntariado/base_listado.html" %}
+
+{% block titulo %}Oportunidades{% endblock %}
+{% block titulo_pagina %}Oportunidades{% endblock %}
+{% block entradilla %}{{ oportunidades|length }} oportunidades de voluntariado, por orden de fecha de inicio.{% endblock %}
+
+{% block listado %}
+<ul class="talones">
+    {% for oportunidad in oportunidades %}
+        {% include "voluntariado/_tarjeta_oportunidad.html" %}
+    {% empty %}
+        <li class="vacio">Todavía no hay oportunidades. Añádelas desde la administración.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,13 @@
+{# Fragmento reutilizable: "talón" de una oportunidad (se usa con include) #}
+<li class="talon c-{{ oportunidad.causa.nombre|slugify }}">
+    <time class="talon__fecha" datetime="{{ oportunidad.fecha_inicio|date:'Y-m-d' }}">
+        <span class="talon__dia">{{ oportunidad.fecha_inicio|date:"j" }}</span>
+        <span class="talon__mes">{{ oportunidad.fecha_inicio|date:"b" }}</span>
+    </time>
+    <div class="talon__cuerpo">
+        <h3 class="talon__titulo"><a href="{{ oportunidad.get_absolute_url }}">{{ oportunidad.titulo }}</a></h3>
+        <p class="talon__dato">{{ oportunidad.lugar }}, {{ oportunidad.horas_semana }} h a la semana</p>
+        <p class="talon__dato">Con {% for entidad in oportunidad.entidades.all %}{% if not forloop.first %}{% if forloop.last %} y {% else %}, {% endif %}{% endif %}{{ entidad.nombre }}{% endfor %}</p>
+    </div>
+    <a class="talon__causa" href="{{ oportunidad.causa.get_absolute_url }}">{{ oportunidad.causa.nombre }}</a>
+</li>
