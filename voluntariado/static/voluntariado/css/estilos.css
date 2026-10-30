@@ -251,6 +251,15 @@ a {
     color: #ffffff;
 }
 
+.mes {
+    margin-top: 2.5rem;
+}
+
+.mes h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
 /* ---------- Listados de causas y entidades ---------- */
 .filas {
     margin: 0;

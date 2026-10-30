@@ -5,11 +5,18 @@
 {% block entradilla %}{{ oportunidades|length }} oportunidades de voluntariado, por orden de fecha de inicio.{% endblock %}
 
 {% block listado %}
-<ul class="talones">
-    {% for oportunidad in oportunidades %}
-        {% include "voluntariado/_tarjeta_oportunidad.html" %}
-    {% empty %}
-        <li class="vacio">Todavía no hay oportunidades. Añádelas desde la administración.</li>
-    {% endfor %}
-</ul>
+{# agrupadas por mes #}
+{% regroup oportunidades by fecha_inicio|date:"F \d\e Y" as meses %}
+{% for mes in meses %}
+    <section class="mes">
+        <h2>{{ mes.grouper|capfirst }}</h2>
+        <ul class="talones">
+            {% for oportunidad in mes.list %}
+                {% include "voluntariado/_tarjeta_oportunidad.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+{% empty %}
+    <p class="vacio">Todavía no hay oportunidades. Añádelas desde la administración.</p>
+{% endfor %}
 {% endblock %}
