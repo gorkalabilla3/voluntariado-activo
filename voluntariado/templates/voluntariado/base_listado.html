@@ -1,0 +1,12 @@
+{% extends "voluntariado/base.html" %}
+{# Nivel 2: estructura común a todas las páginas de listado #}
+
+{% block contenido %}
+<section>
+    <header class="ficha-cabecera">
+        <h1>{% block titulo_pagina %}{% endblock %}</h1>
+        <p class="entradilla">{% block entradilla %}{% endblock %}</p>
+    </header>
+    {% block listado %}{% endblock %}
+</section>
+{% endblock %}

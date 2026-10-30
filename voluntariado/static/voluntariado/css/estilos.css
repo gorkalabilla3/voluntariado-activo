@@ -1,0 +1,146 @@
+/* ============================================================
+   Voluntariado Activo — hoja de estilos
+   Idea: cada oportunidad es un "talón" de inscripción con su fecha,
+   y cada causa tiene su propio color (variable --c).
+   Tinta: azul #1b2a6b · Papel: blanco · Rotulador: amarillo #ffd43b
+   ============================================================ */
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #1b2a6b;
+    font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+/* Efecto "rotulador fluorescente" que se usa en menú y enlaces grandes */
+.marcador,
+.menu a[aria-current="page"],
+.menu a:hover {
+    background-image: linear-gradient(transparent 58%, #ffd43b 58%, #ffd43b 92%, transparent 92%);
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+    border-bottom: 3px solid #1b2a6b;
+}
+
+.cabecera__interior {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+}
+
+.logo__punto {
+    color: #ffd43b;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 0.1rem;
+}
+
+/* ---------- Contenido ---------- */
+.principal {
+    flex: 1;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+}
+
+.seccion {
+    margin-top: 4rem;
+}
+
+.entradilla {
+    max-width: 38rem;
+    font-size: 1.2rem;
+    color: #4a557f;
+}
+
+.vacio {
+    color: #4a557f;
+}
+
+/* ---------- Pie ---------- */
+.pie {
+    background-color: #1b2a6b;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.pie__interior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 2rem;
+}
+
+.pie p {
+    margin: 0;
+}
+
+.pie a {
+    color: #ffd43b;
+}

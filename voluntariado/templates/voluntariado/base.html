@@ -1,0 +1,39 @@
+{% load static %}<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Oportunidades de voluntariado para estudiantes universitarios">
+    <title>{% block titulo %}Inicio{% endblock %} | Voluntariado Activo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'voluntariado/css/estilos.css' %}">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera__interior">
+            <a class="logo" href="{% url 'portada' %}">voluntariado activo<span class="logo__punto">.</span></a>
+            <nav class="menu" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="{% url 'portada' %}"{% if request.path == "/" %} aria-current="page"{% endif %}>Inicio</a></li>
+                    <li><a href="{% url 'lista_oportunidades' %}"{% if "/oportunidades/" in request.path %} aria-current="page"{% endif %}>Oportunidades</a></li>
+                    <li><a href="{% url 'lista_causas' %}"{% if "/causas/" in request.path %} aria-current="page"{% endif %}>Causas</a></li>
+                    <li><a href="{% url 'lista_entidades' %}"{% if "/entidades/" in request.path %} aria-current="page"{% endif %}>Entidades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor principal">
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie__interior">
+            <p>Voluntariado Activo, proyecto de Ingeniería Web en la Universidad de Deusto</p>
+            <p><a href="{% url 'admin:index' %}">Administración</a></p>
+        </div>
+    </footer>
+</body>
+</html>

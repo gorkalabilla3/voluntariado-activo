@@ -1,0 +1,12 @@
+{% extends "voluntariado/base.html" %}
+
+{% block contenido %}
+<h1>Voluntariado Activo</h1>
+<ul>
+    {% for oportunidad in destacadas %}
+        <li>{{ oportunidad.titulo }} ({{ oportunidad.causa.nombre }})</li>
+    {% empty %}
+        <li>Todavía no hay oportunidades.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
