@@ -1,0 +1,21 @@
+{% extends "voluntariado/base_listado.html" %}
+
+{% block titulo %}Entidades{% endblock %}
+{% block titulo_pagina %}Entidades{% endblock %}
+{% block entradilla %}ONG y organizaciones que buscan estudiantes voluntarios.{% endblock %}
+
+{% block listado %}
+<ul class="filas">
+    {% for entidad in entidades %}
+        <li class="fila">
+            <h2><a href="{{ entidad.get_absolute_url }}">{{ entidad.nombre }}</a></h2>
+            <div>
+                <p>{{ entidad.descripcion }}</p>
+                <p class="fila__contador">{{ entidad.oportunidades.count }} oportunidades</p>
+            </div>
+        </li>
+    {% empty %}
+        <li class="vacio">Todavía no hay entidades. Añádelas desde la administración.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
