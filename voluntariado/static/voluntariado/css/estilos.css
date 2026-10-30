@@ -5,6 +5,15 @@
    Tinta: azul #1b2a6b · Papel: blanco · Rotulador: amarillo #ffd43b
    ============================================================ */
 
+/* ---------- Color de cada causa (clase c-<nombre-de-la-causa>) ---------- */
+.c-infancia            { --c: #d92b68; }
+.c-personas-mayores    { --c: #6a4bc9; }
+.c-medio-ambiente      { --c: #17804a; }
+.c-refugiados          { --c: #1c68c4; }
+.c-igualdad            { --c: #c7520f; }
+.c-animales            { --c: #8f6a00; }
+.c-pobreza-y-exclusion { --c: #8a4b2a; }
+
 /* ---------- Base ---------- */
 * {
     box-sizing: border-box;
@@ -201,6 +210,44 @@ a {
 .talon__causa:hover {
     background-color: var(--c, #1b2a6b);
     color: #ffffff;
+}
+
+/* ---------- Listados de causas y entidades ---------- */
+.filas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid #1b2a6b;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: minmax(12rem, 1fr) 2fr;
+    gap: 0.5rem 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #c9cde0;
+}
+
+.fila h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.fila h2 a {
+    color: var(--c, #1b2a6b);
+    text-decoration: none;
+}
+
+.fila h2 a:hover {
+    background-image: linear-gradient(transparent 62%, #ffd43b 62%, #ffd43b 90%, transparent 90%);
+}
+
+.fila p {
+    margin: 0 0 0.4rem;
+}
+
+.fila__contador {
+    font-weight: 700;
 }
 
 /* ---------- Páginas de detalle ---------- */

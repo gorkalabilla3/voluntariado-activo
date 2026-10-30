@@ -1,0 +1,21 @@
+{% extends "voluntariado/base_listado.html" %}
+
+{% block titulo %}Causas{% endblock %}
+{% block titulo_pagina %}Causas{% endblock %}
+{% block entradilla %}Cada causa tiene su color: lo verás en todas sus oportunidades.{% endblock %}
+
+{% block listado %}
+<ul class="filas">
+    {% for causa in causas %}
+        <li class="fila c-{{ causa.nombre|slugify }}">
+            <h2><a href="{{ causa.get_absolute_url }}">{{ causa.nombre }}</a></h2>
+            <div>
+                <p>{{ causa.descripcion }}</p>
+                <p class="fila__contador">{{ causa.oportunidades.count }} oportunidades</p>
+            </div>
+        </li>
+    {% empty %}
+        <li class="vacio">Todavía no hay causas. Añádelas desde la administración.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

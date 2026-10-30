@@ -1,0 +1,21 @@
+{% extends "voluntariado/base_detalle.html" %}
+
+{% block titulo %}{{ causa.nombre }}{% endblock %}
+{% block miga_seccion %}<a href="{% url 'lista_causas' %}">Causas</a>{% endblock %}
+{% block titulo_pagina %}{{ causa.nombre }}{% endblock %}
+{% block clase_color %}c-{{ causa.nombre|slugify }}{% endblock %}
+{% block titulo_h1 %}{{ causa.nombre }}{% endblock %}
+{% block subtitulo %}<p class="entradilla">{{ causa.descripcion }}</p>{% endblock %}
+
+{% block ficha %}
+<section>
+    <h2>Oportunidades de esta causa</h2>
+    <ul class="talones">
+        {% for oportunidad in causa.oportunidades.all %}
+            {% include "voluntariado/_tarjeta_oportunidad.html" %}
+        {% empty %}
+            <li class="vacio">Esta causa aún no tiene oportunidades.</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
