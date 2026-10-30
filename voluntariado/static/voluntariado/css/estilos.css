@@ -55,6 +55,13 @@ a {
     color: inherit;
 }
 
+a:focus-visible {
+    outline: 3px solid #ffd43b;
+    outline-offset: 3px;
+    background-color: #1b2a6b;
+    color: #ffffff;
+}
+
 /* Efecto "rotulador fluorescente" que se usa en menú y enlaces grandes */
 .marcador,
 .menu a[aria-current="page"],
@@ -168,6 +175,16 @@ a {
     letter-spacing: 0;
     vertical-align: top;
     color: #4a557f;
+}
+
+/* solo para lectores de pantalla */
+.oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
 
 /* ---------- Talón de una oportunidad ---------- */
@@ -390,4 +407,39 @@ a {
 
 .pie a {
     color: #ffd43b;
+}
+
+/* movil */
+@media (max-width: 700px) {
+    h1,
+    .ficha-cabecera h1 {
+        font-size: 2.4rem;
+    }
+
+    .causas-gigantes a {
+        font-size: 3rem;
+    }
+
+    .talon {
+        grid-template-columns: 4.5rem 1fr;
+    }
+
+    .talon__fecha {
+        grid-row: 1 / span 2;
+    }
+
+    .talon__causa {
+        grid-column: 2;
+        justify-self: start;
+        margin: 0 1.25rem 1rem;
+    }
+
+    .fila {
+        grid-template-columns: 1fr;
+    }
+
+    .datos div {
+        border-right: 0;
+        border-bottom: 2px dashed #1b2a6b;
+    }
 }
