@@ -131,6 +131,45 @@ a {
     color: #4a557f;
 }
 
+/* portada */
+.portada__pregunta {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.causas-gigantes {
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.causas-gigantes li {
+    line-height: 0.95;
+}
+
+.causas-gigantes a {
+    display: inline-block;
+    font-size: 5.25rem;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    color: var(--c, #1b2a6b);
+    text-decoration: none;
+    padding: 0 0.15rem;
+}
+
+.causas-gigantes a:hover {
+    background-image: linear-gradient(transparent 62%, #ffd43b 62%, #ffd43b 90%, transparent 90%);
+}
+
+.causas-gigantes__num {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    vertical-align: top;
+    color: #4a557f;
+}
+
 /* ---------- Talón de una oportunidad ---------- */
 .talones {
     margin: 0;

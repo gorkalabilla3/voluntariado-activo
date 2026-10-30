@@ -1,12 +1,25 @@
 {% extends "voluntariado/base.html" %}
 
 {% block contenido %}
-<h1>Voluntariado Activo</h1>
-<ul>
-    {% for oportunidad in destacadas %}
-        <li>{{ oportunidad.titulo }} ({{ oportunidad.causa.nombre }})</li>
-    {% empty %}
-        <li>Todavía no hay oportunidades.</li>
-    {% endfor %}
-</ul>
+<section>
+    <h1 class="portada__pregunta">¿Qué te mueve?</h1>
+    <ul class="causas-gigantes">
+        {% for causa in causas %}
+            <li class="c-{{ causa.nombre|slugify }}"><a href="{{ causa.get_absolute_url }}">{{ causa.nombre }}<span class="causas-gigantes__num"> {{ causa.num_oportunidades }}</span></a></li>
+        {% endfor %}
+    </ul>
+    <p class="entradilla">Elige una causa y apúntate a la próxima fecha. Todas las oportunidades están pensadas para compaginarlas con las clases.</p>
+</section>
+
+<section class="seccion">
+    <h2>Lo próximo de cada causa</h2>
+    <ul class="talones">
+        {% for oportunidad in destacadas %}
+            {% include "voluntariado/_tarjeta_oportunidad.html" %}
+        {% empty %}
+            <li class="vacio">Todavía no hay oportunidades. Añádelas desde la administración.</li>
+        {% endfor %}
+    </ul>
+    <p class="seccion"><a class="marcador" href="{% url 'lista_oportunidades' %}">Ver todas las oportunidades</a></p>
+</section>
 {% endblock %}
