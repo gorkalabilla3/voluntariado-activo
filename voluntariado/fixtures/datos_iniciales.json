@@ -1,0 +1,447 @@
+[
+  {
+    "model": "voluntariado.causa",
+    "pk": 1,
+    "fields": {
+      "nombre": "Infancia",
+      "descripcion": "Acompañamiento escolar, ocio educativo y apoyo a niños y niñas en situación de vulnerabilidad."
+    }
+  },
+  {
+    "model": "voluntariado.causa",
+    "pk": 2,
+    "fields": {
+      "nombre": "Personas mayores",
+      "descripcion": "Compañía, actividades y apoyo a personas mayores que viven solas o en residencias."
+    }
+  },
+  {
+    "model": "voluntariado.causa",
+    "pk": 3,
+    "fields": {
+      "nombre": "Medio ambiente",
+      "descripcion": "Limpieza de espacios naturales, reforestación y sensibilización sobre el cambio climático."
+    }
+  },
+  {
+    "model": "voluntariado.causa",
+    "pk": 4,
+    "fields": {
+      "nombre": "Refugiados",
+      "descripcion": "Acogida, clases de idioma y orientación para personas refugiadas y migrantes."
+    }
+  },
+  {
+    "model": "voluntariado.causa",
+    "pk": 5,
+    "fields": {
+      "nombre": "Igualdad",
+      "descripcion": "Proyectos para promover la igualdad de género y prevenir la discriminación."
+    }
+  },
+  {
+    "model": "voluntariado.causa",
+    "pk": 6,
+    "fields": {
+      "nombre": "Animales",
+      "descripcion": "Cuidado de animales abandonados, paseos y apoyo a campañas de adopción."
+    }
+  },
+  {
+    "model": "voluntariado.causa",
+    "pk": 7,
+    "fields": {
+      "nombre": "Pobreza y exclusión",
+      "descripcion": "Recogida y reparto de alimentos y apoyo a personas en riesgo de exclusión social."
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 1,
+    "fields": {
+      "nombre": "Cruz Roja",
+      "descripcion": "Organización humanitaria presente en todo el territorio con programas sociales, de salud y de emergencias.",
+      "web": "https://www.cruzroja.es",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 2,
+    "fields": {
+      "nombre": "Cáritas",
+      "descripcion": "Organización de acción social que acompaña a personas en situación de pobreza y exclusión.",
+      "web": "https://www.caritas.es",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 3,
+    "fields": {
+      "nombre": "Greenpeace",
+      "descripcion": "Organización ecologista independiente que trabaja en la protección del medio ambiente.",
+      "web": "https://es.greenpeace.org",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 4,
+    "fields": {
+      "nombre": "Médicos del Mundo",
+      "descripcion": "Asociación que defiende el derecho a la salud de las personas más vulnerables.",
+      "web": "https://www.medicosdelmundo.org",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 5,
+    "fields": {
+      "nombre": "Banco de Alimentos",
+      "descripcion": "Red de bancos de alimentos que recupera excedentes y los distribuye entre entidades sociales.",
+      "web": "https://www.fesbal.org",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 6,
+    "fields": {
+      "nombre": "CEAR",
+      "descripcion": "Comisión Española de Ayuda al Refugiado: acogida y defensa de los derechos de las personas refugiadas.",
+      "web": "https://www.cear.es",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 7,
+    "fields": {
+      "nombre": "Save the Children",
+      "descripcion": "Organización que trabaja por los derechos de la infancia.",
+      "web": "https://www.savethechildren.es",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 8,
+    "fields": {
+      "nombre": "Fundación Affinity",
+      "descripcion": "Fundación dedicada a promover el vínculo entre personas y animales de compañía y a luchar contra el abandono.",
+      "web": "https://www.fundacion-affinity.org",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.entidad",
+    "pk": 9,
+    "fields": {
+      "nombre": "Fundación Mujeres",
+      "descripcion": "Fundación que impulsa la igualdad de oportunidades entre mujeres y hombres.",
+      "web": "https://www.fundacionmujeres.es",
+      "email": ""
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 1,
+    "fields": {
+      "titulo": "Refuerzo escolar por las tardes",
+      "descripcion": "Ayuda con los deberes y técnicas de estudio a alumnado de primaria.",
+      "causa": 1,
+      "entidades": [
+        7,
+        2
+      ],
+      "lugar": "Bilbao (Otxarkoaga)",
+      "fecha_inicio": "2026-11-09",
+      "fecha_fin": "2027-06-15",
+      "horas_semana": 3,
+      "plazas": 12
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 2,
+    "fields": {
+      "titulo": "Ludoteca de fin de semana",
+      "descripcion": "Organización de juegos y talleres para niños y niñas de 6 a 12 años.",
+      "causa": 1,
+      "entidades": [
+        1
+      ],
+      "lugar": "Barakaldo",
+      "fecha_inicio": "2026-12-05",
+      "fecha_fin": "2027-03-27",
+      "horas_semana": 4,
+      "plazas": 8
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 3,
+    "fields": {
+      "titulo": "Campamento urbano de Navidad",
+      "descripcion": "Monitores voluntarios para el campamento urbano durante las vacaciones.",
+      "causa": 1,
+      "entidades": [
+        7,
+        1
+      ],
+      "lugar": "Bilbao (San Francisco)",
+      "fecha_inicio": "2026-12-22",
+      "fecha_fin": "2027-01-05",
+      "horas_semana": 20,
+      "plazas": 15
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 4,
+    "fields": {
+      "titulo": "Acompañamiento a mayores que viven solos",
+      "descripcion": "Visitas semanales y llamadas de compañía a personas mayores.",
+      "causa": 2,
+      "entidades": [
+        1,
+        2
+      ],
+      "lugar": "Bilbao",
+      "fecha_inicio": "2026-11-16",
+      "fecha_fin": "2027-06-30",
+      "horas_semana": 2,
+      "plazas": 20
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 5,
+    "fields": {
+      "titulo": "Taller de nuevas tecnologías para mayores",
+      "descripcion": "Enseña a usar el móvil y videollamadas en un centro de día.",
+      "causa": 2,
+      "entidades": [
+        1
+      ],
+      "lugar": "Getxo",
+      "fecha_inicio": "2027-01-12",
+      "fecha_fin": "2027-04-20",
+      "horas_semana": 2,
+      "plazas": 6
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 6,
+    "fields": {
+      "titulo": "Limpieza de la ría",
+      "descripcion": "Jornada de recogida de residuos en las márgenes de la ría.",
+      "causa": 3,
+      "entidades": [
+        3
+      ],
+      "lugar": "Bilbao (Zorrotzaurre)",
+      "fecha_inicio": "2026-11-21",
+      "fecha_fin": "2026-11-21",
+      "horas_semana": 5,
+      "plazas": 40
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 7,
+    "fields": {
+      "titulo": "Reforestación en Pagasarri",
+      "descripcion": "Plantación de especies autóctonas con grupos universitarios.",
+      "causa": 3,
+      "entidades": [
+        3,
+        1
+      ],
+      "lugar": "Monte Pagasarri",
+      "fecha_inicio": "2027-02-13",
+      "fecha_fin": "2027-02-14",
+      "horas_semana": 6,
+      "plazas": 30
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 8,
+    "fields": {
+      "titulo": "Clases de castellano para refugiados",
+      "descripcion": "Clases de idioma de nivel inicial para personas recién llegadas.",
+      "causa": 4,
+      "entidades": [
+        6,
+        2
+      ],
+      "lugar": "Bilbao (Deusto)",
+      "fecha_inicio": "2026-11-10",
+      "fecha_fin": "2027-05-31",
+      "horas_semana": 3,
+      "plazas": 10
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 9,
+    "fields": {
+      "titulo": "Acogida y orientación sociolaboral",
+      "descripcion": "Apoyo en la búsqueda de empleo y preparación de entrevistas.",
+      "causa": 4,
+      "entidades": [
+        6,
+        4,
+        1
+      ],
+      "lugar": "Bilbao",
+      "fecha_inicio": "2027-01-18",
+      "fecha_fin": "2027-06-30",
+      "horas_semana": 3,
+      "plazas": 8
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 10,
+    "fields": {
+      "titulo": "Talleres de igualdad en institutos",
+      "descripcion": "Dinamización de talleres sobre igualdad y prevención de la violencia de género.",
+      "causa": 5,
+      "entidades": [
+        9
+      ],
+      "lugar": "Varios institutos de Bizkaia",
+      "fecha_inicio": "2026-11-25",
+      "fecha_fin": "2027-03-08",
+      "horas_semana": 2,
+      "plazas": 10
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 11,
+    "fields": {
+      "titulo": "Campaña 8M en la universidad",
+      "descripcion": "Organización de actividades de sensibilización en torno al 8 de marzo.",
+      "causa": 5,
+      "entidades": [
+        9,
+        4
+      ],
+      "lugar": "Campus de Deusto",
+      "fecha_inicio": "2027-02-22",
+      "fecha_fin": "2027-03-08",
+      "horas_semana": 3,
+      "plazas": 15
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 12,
+    "fields": {
+      "titulo": "Paseo de perros del refugio",
+      "descripcion": "Paseos y socialización de perros a la espera de adopción.",
+      "causa": 6,
+      "entidades": [
+        8
+      ],
+      "lugar": "Arrigorriaga",
+      "fecha_inicio": "2026-11-07",
+      "fecha_fin": "2027-07-31",
+      "horas_semana": 3,
+      "plazas": 25
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 13,
+    "fields": {
+      "titulo": "Jornada de adopción responsable",
+      "descripcion": "Atención en la feria de adopción y difusión en redes.",
+      "causa": 6,
+      "entidades": [
+        8
+      ],
+      "lugar": "Bilbao (Plaza Nueva)",
+      "fecha_inicio": "2027-04-17",
+      "fecha_fin": "2027-04-17",
+      "horas_semana": 6,
+      "plazas": 12
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 14,
+    "fields": {
+      "titulo": "Gran Recogida de Alimentos",
+      "descripcion": "Recogida de alimentos en supermercados durante la campaña anual.",
+      "causa": 7,
+      "entidades": [
+        5,
+        1,
+        2
+      ],
+      "lugar": "Supermercados de Bizkaia",
+      "fecha_inicio": "2026-11-27",
+      "fecha_fin": "2026-11-28",
+      "horas_semana": 4,
+      "plazas": 100
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 15,
+    "fields": {
+      "titulo": "Clasificación en almacén de alimentos",
+      "descripcion": "Clasificación y preparación de lotes para su reparto.",
+      "causa": 7,
+      "entidades": [
+        5
+      ],
+      "lugar": "Basauri",
+      "fecha_inicio": "2026-12-01",
+      "fecha_fin": "2027-05-31",
+      "horas_semana": 4,
+      "plazas": 15
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 16,
+    "fields": {
+      "titulo": "Atención en comedor social",
+      "descripcion": "Servicio de comidas y acompañamiento a personas usuarias.",
+      "causa": 7,
+      "entidades": [
+        2
+      ],
+      "lugar": "Bilbao (Casco Viejo)",
+      "fecha_inicio": "2026-11-02",
+      "fecha_fin": "2027-06-30",
+      "horas_semana": 3,
+      "plazas": 10
+    }
+  },
+  {
+    "model": "voluntariado.oportunidad",
+    "pk": 17,
+    "fields": {
+      "titulo": "Promoción de la salud en barrios",
+      "descripcion": "Apoyo en sesiones de prevención y salud comunitaria.",
+      "causa": 7,
+      "entidades": [
+        4
+      ],
+      "lugar": "Bilbao (San Francisco)",
+      "fecha_inicio": "2026-10-05",
+      "fecha_fin": "2027-01-31",
+      "horas_semana": 2,
+      "plazas": 8
+    }
+  }
+]
