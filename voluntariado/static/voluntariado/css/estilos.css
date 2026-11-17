@@ -245,6 +245,15 @@ a:focus-visible {
     text-decoration: underline;
 }
 
+.talon__dato a {
+    color: #1b2a6b;
+    font-weight: 600;
+}
+
+.talon__dato a:hover {
+    background-color: #ffd43b;
+}
+
 .talon__dato {
     margin: 0;
     color: #4a557f;

@@ -7,7 +7,7 @@
     <div class="talon__cuerpo">
         <h3 class="talon__titulo"><a href="{{ oportunidad.get_absolute_url }}">{{ oportunidad.titulo }}</a></h3>
         <p class="talon__dato">{{ oportunidad.lugar }}, {{ oportunidad.horas_semana }} h a la semana</p>
-        <p class="talon__dato">Con {% for entidad in oportunidad.entidades.all %}{% if not forloop.first %}{% if forloop.last %} y {% else %}, {% endif %}{% endif %}{{ entidad.nombre }}{% endfor %}</p>
+        <p class="talon__dato">Con {% for entidad in oportunidad.entidades.all %}{% if not forloop.first %}{% if forloop.last %} y {% else %}, {% endif %}{% endif %}<a href="{{ entidad.get_absolute_url }}">{{ entidad.nombre }}</a>{% endfor %}</p>
     </div>
     <a class="talon__causa" href="{{ oportunidad.causa.get_absolute_url }}">{{ oportunidad.causa.nombre }}</a>
 </li>
